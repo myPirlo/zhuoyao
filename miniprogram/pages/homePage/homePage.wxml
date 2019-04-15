@@ -1,0 +1,19 @@
+<view class='container'>
+  <view class='oneArticle' bindtap='toDetail'>
+    <view class='bigImg'>
+      <image src='../../images/1.jpg'></image>
+    </view>
+    <view class='article-title'>
+      《一起来捉妖》哪些妖怪值得培养
+    </view>
+    <view class='items'>
+      <view class='item-left'>
+        <view class='avatar-box'>
+          <image src='../../images/1.jpg'></image>
+        </view>
+        <text>海带君</text>
+      </view>
+      <view class='item-right'>2019年14月10日</view>
+    </view>
+  </view>
+</view>

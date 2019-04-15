@@ -1,0 +1,47 @@
+/* miniprogram/pages/articleDetail/articleDetail.wxss */
+.title{
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.items{
+  height: 100rpx;
+  padding:0 10rpx;
+  flex-direction: row;
+  justify-content:flex-start;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  margin-left: 10px;
+  color: #aaa;
+}
+.items .item-left{
+  width: 200rpx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start
+}
+.items .item-left .avatar-box{
+  width: 50rpx;
+  height: 50rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.items .item-left text{
+  margin-left: 20rpx;
+}
+.items .item-right{
+  width: 240rpx;
+}
+.article-content{
+  font-size: 16px;
+  padding: 0 20rpx;
+  line-height: 26px;
+}
+.y-box{
+  height: 1000rpx;
+  align-items: center;
+}
+ image{
+  width: 100%;
+  margin-top: 30rpx;
+}
