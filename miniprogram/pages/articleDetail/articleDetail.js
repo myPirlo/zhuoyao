@@ -1,18 +1,36 @@
 // miniprogram/pages/articleDetail/articleDetail.js
+var WxParse = require('../../wxParse/wxParse.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    article:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.showArticle(options.id)
 
+  },
+  showArticle(id){
+    let _this=this
+    const db = wx.cloud.database()
+    db.collection('articles').where({
+      id:id
+    }).get({
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          articles:res.data
+        })
+      }
+    })
+    var that = this;
+    WxParse.wxParse('article', 'html', this.data.article, that, 5);
   },
 
   /**

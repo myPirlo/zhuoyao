@@ -11,7 +11,7 @@
    <view class='cards-container'>
         <view class="one-card" wx:for="{{cardItems}}" wx:key="index">
             <view class="bigImg">
-                <image src="{{item.picSrc}}" />
+                <image src="{{item.img}}" />
             </view>
             <view class="name">
                 {{item.name}}

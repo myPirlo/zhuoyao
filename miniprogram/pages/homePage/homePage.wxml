@@ -1,19 +1,19 @@
 <view class='container'>
-  <view class='oneArticle' bindtap='toDetail'>
+  <view class='oneArticle' bindtap='toDetail' wx:for="{{articles}}" wx:key="index" data-articleid='{{index}}'>
     <view class='bigImg'>
-      <image src='../../images/1.jpg'></image>
+      <image src='{{item.articleImg}}'></image>
     </view>
     <view class='article-title'>
-      《一起来捉妖》哪些妖怪值得培养
+       {{item.articleTitle}}
     </view>
     <view class='items'>
       <view class='item-left'>
         <view class='avatar-box'>
-          <image src='../../images/1.jpg'></image>
+          <image src='{{item.authorAvatar}}'></image>
         </view>
-        <text>海带君</text>
+        <text>{{item.author}}</text>
       </view>
-      <view class='item-right'>2019年14月10日</view>
+      <view class='item-right'>{{item.publicTime}}</view>
     </view>
   </view>
 </view>

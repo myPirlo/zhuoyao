@@ -2,15 +2,7 @@
   "pages": [
     "pages/cards/cards",
     "pages/homePage/homePage",
-    "pages/articleDetail/articleDetail",
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
-    
+    "pages/articleDetail/articleDetail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -24,18 +16,18 @@
     "selectedColor": "#F23030",
     "borderStyle": "white",
     "backgroundColor": "white",
-    "list": [
-      {
-        "selectedIconPath": "images/ji_on.png",
-        "iconPath": "images/ji.png",
-        "pagePath": "pages/cards/cards",
-        "text": "妖灵图鉴"
-      },
+    "list": [ 
       {
         "selectedIconPath": "images/tujian_on.png",
         "iconPath": "images/tujian.png",
         "pagePath":"pages/homePage/homePage",
         "text": "图文攻略"
+      },
+      {
+        "selectedIconPath": "images/ji_on.png",
+        "iconPath": "images/ji.png",
+        "pagePath": "pages/cards/cards",
+        "text": "妖灵图鉴"
       }
     ]
   }

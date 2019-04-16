@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    articles:[]
 
   },
 
@@ -12,11 +13,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getList()
   },
-  toDetail(){
+  getList(){
+    let _this=this
+    const db = wx.cloud.database()
+    db.collection('articles').get({
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          articles:res.data
+        })
+      }
+    })
+  },
+  toDetail(e){
+    let articleId=e.currentTarget.dataset.articleid
     wx.navigateTo({
-      url: '/pages/articleDetail/articleDetail',
+      url: `/pages/articleDetail/articleDetail?id=`+articleId,
     })
   },
 

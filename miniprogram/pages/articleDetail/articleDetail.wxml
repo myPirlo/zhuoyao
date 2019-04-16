@@ -1,4 +1,4 @@
-<view class='container'>
+<view class='container' style="overflow:hidden">
   <view class='title'>
      《一起来捉妖》哪些妖怪值得培养
   </view>   
@@ -11,34 +11,8 @@
       </view>
       <view class='item-right'>2019年14月10日</view>
     </view>
-        <view class='article-content'>
-         <p>1.初期上古三门的选择</p>
-         <p>
-         大部分攻略里建议游戏开始第一只三门选择冰或烈，前期优势明显，为什么不选空(我个人理解并不是因为这只空是大后期，而是身为一只大后期，资质上太平庸了，开局三门 5 个属性都20，前期三门都注定只能成为一只过渡妖，对于想长期想玩这款游戏的玩家培养斗玩网首发原创一只资质都 20 的大后期实在是亏损太大，而且这三只三门基本上是抓不到的，培养难度上更难，希望官方能了解下)
-         </p>
-         <p>
-         2.先去学会旋转球+完美捕捉(网络有攻略可以去看下)
-         </p>
-         <p>
-         3.有时间的可以搭个公交去开图拿经验(今天打擂台我的三只强怪硬是打不过一个比我高 4 级的冰狼)而且前期高等级能开起很多</p>
-         <p>
-         4.属性相克先去了解下，1. 5 倍伤不是盖的!!!
-         </p>
-         <p>
-         5.不要一抓到觉得合适的怪就升级，忍一忍，云纹前期真的很缺!!我加错怪都快哭了T_T
-         </p>
-         <p>
-         6.资质篇：物防，法防，生命这三个通用资质一定要高，越高越好!物攻和法攻看妖灵的技能来定位!!
-         </p>
-         <p>
-         7.最后推荐几只前期我觉得不错的妖灵:
-         </p>
-         <view class='y-box'>
-          <image src='../../images/y1.png'></image>
-          <image src='../../images/y2.png'></image>
-          <image src='../../images/y3.png'></image>
-         </view>
-
-        
+    <view class='article-content'>
+      <import src="../../wxParse/wxParse.wxml"/>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
     </view>
 </view>

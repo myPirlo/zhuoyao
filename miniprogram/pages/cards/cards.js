@@ -6,28 +6,28 @@ Page({
    */
   data: {
     showSearchIcon:true,
+    openid:'',
     searchData:'',
-    cardItems:[
-      {
-        picSrc:'../../images/zhaofeng.png',
-        name:'招风'
-      },
-      {
-        picSrc:'../../images/zhaofeng.png',
-        name:'颜如玉'
-      },
-      {
-        picSrc:'../../images/zhaofeng.png',
-        name:'小河马'
-      }
-    ]
+    cardItems:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getList()
+  },
+  getList(){
+    let _this=this
+    const db = wx.cloud.database()
+    db.collection('guaiwu').get({
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          cardItems:res.data
+        })
+      }
+    })
   },
   inputSearch(e){
     this.setData({
