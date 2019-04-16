@@ -1,0 +1,69 @@
+/* miniprogram/pages/cards/cards.wxss */
+page{
+    background: #eeeeee
+}
+.search-box{
+    align-items: center;
+    position: relative;
+}
+.search-box image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.cards-container{
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.one-card{
+    width: 30%;
+    height: 300rpx;
+    background: white;
+    border-radius: 8rpx;
+    margin-top: 20rpx;
+    align-items: center
+}
+.bigImg{
+    height: 230rpx;
+    background: url('http://webfdh.com/zhuayao/cardBg.png');
+    background-size: 100% 100%;
+    width: 80%;
+    margin-bottom: 10rpx;
+    justify-content: center;
+    align-items: center
+}
+.bigImg image{
+    width: 100%;
+    transform: scale(1.5)
+}
+.name{
+    width: 95%;
+    border-radius: 20rpx;
+    color: white;
+    background: rgb(0, 122, 204);
+    text-align: center;
+    font-size: 14px;
+    height: 45rpx;
+    line-height: 45rpx;
+}
+
+.search{
+    width: 90%;
+    border: 1px solid #cdcdcd;
+    height: 30px;
+    border-radius: 8rpx;
+    padding: 0 20rpx;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #bbbbbb;
+    
+}
+.search-txt{
+    flex-direction: row;
+    font-size: 14px;
+    color: #bbbbbb;
+    position: absolute;
+    top: 20px;
+    
+}

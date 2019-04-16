@@ -1,0 +1,23 @@
+<view class='contanier'>
+    <view class='search-box'>
+        <input class="search" bindfocus='searchFocus' bindblur="searchBulr" bindinput='inputSearch' value="{{searchData}}"/>
+        <view class='search-txt' wx:if="{{showSearchIcon&&!searchData}}">
+            <image src="../../images/search.png" />
+            输入妖灵名字搜索
+        </view>
+        
+    </view>
+   
+   <view class='cards-container'>
+        <view class="one-card" wx:for="{{cardItems}}" wx:key="index">
+            <view class="bigImg">
+                <image src="{{item.picSrc}}" />
+            </view>
+            <view class="name">
+                {{item.name}}
+            </view>
+        </view>
+   </view>
+
+
+</view>

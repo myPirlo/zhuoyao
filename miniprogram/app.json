@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/cards/cards",
     "pages/homePage/homePage",
     "pages/articleDetail/articleDetail",
     "pages/index/index",
@@ -9,12 +10,33 @@
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#FF7F50",
+    "navigationBarTitleText": "一起来捉妖",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#F23030",
+    "borderStyle": "white",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/ji_on.png",
+        "iconPath": "images/ji.png",
+        "pagePath": "pages/cards/cards",
+        "text": "妖灵图鉴"
+      },
+      {
+        "selectedIconPath": "images/tujian_on.png",
+        "iconPath": "images/tujian.png",
+        "pagePath":"pages/homePage/homePage",
+        "text": "图文攻略"
+      }
+    ]
   }
 }
