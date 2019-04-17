@@ -8,7 +8,10 @@ Page({
     showSearchIcon:true,
     openid:'',
     searchData:'',
-    cardItems:[]
+    cardItems:[],
+    pageStart:0,
+    pageNum:8,
+    needGetList:true
   },
 
   /**
@@ -17,17 +20,46 @@ Page({
   onLoad: function (options) {
     this.getList()
   },
+  
   getList(){
     let _this=this
     const db = wx.cloud.database()
-    db.collection('guaiwu').get({
+    const _ = db.command
+    wx.showLoading({
+      title: '',
+    })
+    db.collection('guaiwu').where({
+      id:_.gte(_this.data.pageStart).and(_.lte((_this.data.pageNum)))
+    }).get({
       success(res) {
+        wx.hideLoading()
         console.log(res.data)
+        if(res.data.length<9){
+          _this.setData({
+            needGetList:false
+          })
+        }
+        let listArr=_this.data.cardItems.concat(res.data)
         _this.setData({
-          cardItems:res.data
+          cardItems:listArr
         })
+      },
+      fail(){
+        wx.hideLoading()
       }
     })
+  },
+  onReachBottom: function () {
+      if(!this.data.needGetList){
+        return
+      }
+      console.log('加载下一页')
+      this.setData({
+        pageStart:this.data.pageStart+9,
+        pageNum:this.data.pageNum+9
+      })
+      console.log(this.data.pageStart,this.data.pageNum)
+      this.getList()
   },
   inputSearch(e){
     this.setData({
@@ -83,9 +115,7 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+  
 
   /**
    * 用户点击右上角分享

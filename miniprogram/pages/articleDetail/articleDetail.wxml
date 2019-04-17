@@ -1,15 +1,15 @@
 <view class='container' style="overflow:hidden">
   <view class='title'>
-     《一起来捉妖》哪些妖怪值得培养
+     {{title}}
   </view>   
   <view class='items'>
       <view class='item-left'>
         <view class='avatar-box'>
           <image src='../../images/1.jpg'></image>
         </view>
-        <text>海带君</text>
+        <text>{{author}}</text>
       </view>
-      <view class='item-right'>2019年14月10日</view>
+      <view class='item-right'>{{date}}</view>
     </view>
     <view class='article-content'>
       <import src="../../wxParse/wxParse.wxml"/>

@@ -67,3 +67,11 @@ page{
     top: 20px;
     
 }
+.tips{
+    font-size: 16px;
+    color: #bbbbbb;
+    width: 100%;
+    text-align: center;
+    margin-top: 80rpx;
+    padding-bottom: 140rpx;
+}

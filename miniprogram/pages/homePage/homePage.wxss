@@ -18,7 +18,7 @@ page{
 }
 .article-title{
   height: 100rpx;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
   padding:0 10rpx
 }
@@ -43,6 +43,10 @@ page{
   height: 50rpx;
   overflow: hidden;
   border-radius: 50%;
+}
+.items .item-left .avatar-box image{
+  width: 100%;
+  height: 100%
 }
 .items .item-left text{
   margin-left: 20rpx;

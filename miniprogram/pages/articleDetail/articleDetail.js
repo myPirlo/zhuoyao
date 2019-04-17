@@ -6,7 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    article:''
+    article:'',
+    title:'',
+    author:'',
+    date:''
   },
 
   /**
@@ -20,17 +23,20 @@ Page({
     let _this=this
     const db = wx.cloud.database()
     db.collection('articles').where({
-      id:id
+      id:parseInt(id)
     }).get({
       success(res) {
         console.log(res.data)
         _this.setData({
-          articles:res.data
+          article:res.data[0].content,
+          title: res.data[0].articleTitle,
+          date: res.data[0].publicTime,
+          author: res.data[0].author
         })
+        WxParse.wxParse('article', 'html', _this.data.article, _this, 5);
       }
     })
-    var that = this;
-    WxParse.wxParse('article', 'html', this.data.article, that, 5);
+    
   },
 
   /**

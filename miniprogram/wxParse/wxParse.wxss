@@ -18,7 +18,11 @@
     line-height: 1.8;
 }
 view{
-    word-break:break-all; overflow:auto;
+    word-break:break-all; 
+    overflow: hidden;
+}
+view image{
+    width: 100%
 }
 .wxParse-inline{
     display: inline;

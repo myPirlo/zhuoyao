@@ -1,0 +1,135 @@
+/* miniprogram/pages/guard/guard.wxss */
+
+page {
+    background: #F7FAFF;
+}
+
+.guard-bg {
+    height: 320rpx;
+    background: #E38627;
+}
+
+.guard-card {
+    margin: 30rpx;
+    background: #ffffff;
+    border-radius: 30rpx;
+    box-shadow: 1px 1px 2px 1px #ECECEC;
+    color: #434343;
+}
+
+.user-header {
+    padding: 30rpx 30rpx 20rpx 30rpx;
+    position: relative;
+}
+
+.user-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 8rpx;
+    height: 50rpx;
+    background-color: #76D424;
+}
+
+.user-header .title .cn {
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color: #595959;
+}
+
+.user-header .en {
+    font-size: 24rpx;
+    color: #DEDEDE;
+}
+
+.user-header .edit {
+    font-size: 24rpx;
+    color: #B2BEBF;
+}
+
+.user-content {
+    padding: 0 30rpx;
+}
+
+.user-content .avatar {
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 100rpx;
+    overflow: hidden;
+}
+
+.user-content .cell {
+    margin-left: 30rpx;
+}
+
+.user-content .name {
+    margin: 5rpx 0;
+    font-size: 36rpx;
+    font-weight: 600;
+    color: #333333;
+}
+
+.user-content .wechart {
+    line-height: 48rpx;
+    font-size: 28rpx;
+    color: #707070;
+}
+
+.user-sub {
+    padding: 30rpx;
+    font-size: 28rpx;
+    color: #595959;
+}
+
+.send button {
+    margin: 0 30rpx;
+    color: #fff;
+    background: #E38627;
+    border-radius: 50rpx;
+    box-shadow: 1px 1px 2px 1px #ECECEC;
+}
+
+.send-active {
+    background-image: -webkit-linear-gradient(to top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05));
+}
+
+index-period-content, .index-period-header {
+    overflow: hidden;
+    font-size: 24rpx;
+}
+
+.index-period-content .content-li, .index-period-header .header-li {
+    float: left;
+    width: 14.28%;
+    height: 64rpx;
+    line-height: 64rpx;
+    background-size: cover;
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.index-period-content .fail {
+    color: #E4E4E4;
+}
+
+.index-period-content .period {
+    margin: 0 auto;
+    width: 64rpx;
+}
+
+.index-period-content .today {
+    border: 1px solid #E38627;
+}
+
+.period-content {
+    padding: 30rpx;
+}
+
+.cross {
+    margin: 30rpx 0;
+    font-size: 32rpx;
+    text-align: center;
+    color: #dedede;
+}
