@@ -1,14 +1,31 @@
 <view class='box'>
-  <view class='onBar'>
-    <text>属性:</text>
-    <slider style='width:75%' block-size='16' value='16'  min="0" max="32" show-value />
+  <view class='title'>请输入妖灵各项资质</view>
+  <view class='onBar' wx:for="{{barItem}}" wx:key="index"  >
+    <text>{{item.name}}:</text>
+    <slider bindchange='barChange' style='width:75%' block-size='16' value='{{item.value}}' data-index="{{index}}" min="0" max="32" show-value />
   </view>
-  <view class='onBar'>
-    <text>属性:</text>
-    <slider style='width:75%' block-size='16' value='16'  min="0" max="32" show-value />
+  <view class='title' style='margin-top:10px'>请选择主属性</view>
+  <view class="checkGroup">
+    <checkbox-group bindchange="changeCheck">
+      <view >
+        <checkbox value="0" />物攻
+      </view>
+      <view >
+        <checkbox value="1" />物防
+      </view>
+      <view >
+        <checkbox value="2" />法攻
+      </view>
+      <view >
+        <checkbox value="3" />法防
+      </view>
+      <view >
+        <checkbox value="4" />生命
+      </view>
+    </checkbox-group>
   </view>
   
 </view>
-
+<button class='beginCal' bindtap='beginCal'>开始评估</button>
 
 

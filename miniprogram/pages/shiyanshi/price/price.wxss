@@ -2,10 +2,34 @@
 .box{
   padding: 20px;
 }
+.title{
+  font-size: 14px;
+  text-align: center;
+  color: darkslategrey;
+  margin-bottom: 10px;
+}
 .onBar{
   flex-direction: row;
   justify-content: space-around;
   font-size: 14px;
   align-items: center;
-
+}
+.beginCal{
+  width: 88%;
+  background: #800000;
+  color: white;
+  margin-top: 20px;
+}
+.checkGroup{
+  font-size: 14px
+}
+checkbox-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+checkbox-group view{
+  flex-direction: row;
+  align-items: center
 }

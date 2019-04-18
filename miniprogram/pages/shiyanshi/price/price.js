@@ -5,7 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    percent:80
+    barItem:[
+      {
+        name:'物攻',
+        value:16,
+        isMain:false
+      },
+      {
+        name:'物防',
+        value:16,
+        isMain:false
+      },
+      {
+        name:'法攻',
+        value:16,
+        isMain:false
+      },
+      {
+        name:'法防',
+        value:16,
+        isMain:false
+      },
+      {
+        name:'生命',
+        value:16,
+        isMain:false
+      }
+    ],
+    attribute:[]
   },
 
   /**
@@ -13,6 +40,19 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  barChange(e){
+    let index=e.currentTarget.dataset.index
+    let thisItem="barItem["+index+"].value"
+    this.setData({
+      [thisItem]:e.detail.value
+    })
+  },
+  beginCal(){
+    console.log(this.data.barItem)
+  },
+  changeCheck(e){
+    console.log(e)
   },
 
   /**
