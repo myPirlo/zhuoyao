@@ -1,0 +1,15 @@
+<view class='container'>
+  <view class='btn' bindtap='toPriceView'>
+    <view class='mask'></view>
+    <text>妖 灵 估 价 器</text>
+  </view>
+  <view class='btn' bindtap='toStepView'>
+    <view class='mask'>妖 灵 计 步 器</view>
+    <text></text>
+  </view>
+  <view class='btn' bindtap='toCatchView'>
+    <view class='mask'></view>
+    <text>捉 妖 模 拟 器</text>
+  </view>
+  
+</view>

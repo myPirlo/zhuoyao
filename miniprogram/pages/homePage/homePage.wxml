@@ -1,5 +1,6 @@
 <view class='container'>
-  <view class='oneArticle' bindtap='toDetail' wx:for="{{articles}}" wx:key="index" data-articleid='{{index}}'>
+<view class="box" wx:for="{{articles}}" wx:key="index">
+  <view class='oneArticle' bindtap='toDetail'  data-articleid='{{item.id}}'>
     <view class='bigImg'>
       <image src='{{item.articleImg}}'></image>
     </view>
@@ -15,5 +16,6 @@
       </view>
       <view class='item-right'>{{item.publicTime}}</view>
     </view>
+  </view>
   </view>
 </view>

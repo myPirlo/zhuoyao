@@ -18,7 +18,7 @@
             </view>
         </view>
    </view>
-   <view class='tips'>图鉴及攻略更新中...</view>
+   <view class='tips'>{{moreTips}}</view>
 
 
 </view>

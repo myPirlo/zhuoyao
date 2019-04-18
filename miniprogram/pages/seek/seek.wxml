@@ -4,7 +4,7 @@
         <view class="user">
             <view class="user-header flex">
                 <view class="title flex-one">
-                    <view class="cn">自我介绍</view>
+                    <view class="cn">御灵师资料</view>
                     <view class="en">Introduce</view>
                 </view>
             </view>
@@ -26,4 +26,7 @@
         <button open-type='getUserInfo' bindgetuserinfo="toBegin">开始我的捉妖之旅</button>
     </view>
     <view class="cross" bindtap='crossToBegin'>直接进入</view>
+</view>
+<view class="pic">
+    <image src="https://636c-cloudfdh-1259038312.tcb.qcloud.la/guaiwu/6-1-招风.png?sign=5cb2eddb5d4e93797916f1ee033e97ed&t=1555568055" />
 </view>

@@ -1,11 +1,10 @@
-// miniprogram/pages/homePage/homePage.js
+// miniprogram/pages/shiyanshi/overview/overview.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    articles:[]
 
   },
 
@@ -13,28 +12,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getList()
-  },
-  getList(){
-    let _this=this
-    const db = wx.cloud.database()
-    db.collection('articles').orderBy('id', 'desc').get({
-      success(res) {
-        console.log(res.data)
-        _this.setData({
-          articles:res.data
-        })
-      }
-    })
-  },
-  toDetail(e){
-    console.log(e)
-    let articleId=e.currentTarget.dataset.articleid
-    wx.navigateTo({
-      url: `/pages/articleDetail/articleDetail?id=`+articleId,
-    })
-  },
+    
 
+  },
+  toPriceView(){
+    wx.navigateTo({
+      url: '/pages/tobeContinue/tobeContinue',
+    })
+  },
+  toStepView(){
+    wx.navigateTo({
+      url: '/pages/tobeContinue/tobeContinue',
+    })
+  },
+  toCatchView(){
+    wx.navigateTo({
+      url: '/pages/tobeContinue/tobeContinue',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

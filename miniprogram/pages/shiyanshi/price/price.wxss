@@ -1,0 +1,11 @@
+/* miniprogram/pages/shiyanshi/price/price.wxss */
+.box{
+  padding: 20px;
+}
+.onBar{
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+
+}

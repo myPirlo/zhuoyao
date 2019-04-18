@@ -1,9 +1,13 @@
 {
   "pages": [
+    "pages/shiyanshi/price/price",
+    "pages/shiyanshi/overview/overview",
     "pages/seek/seek",
+    "pages/articleDetail/articleDetail",
+    "pages/tobeContinue/tobeContinue",
     "pages/cards/cards",
-    "pages/homePage/homePage",
-    "pages/articleDetail/articleDetail"
+    "pages/homePage/homePage"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -17,11 +21,11 @@
     "selectedColor": "#F23030",
     "borderStyle": "white",
     "backgroundColor": "white",
-    "list": [ 
+    "list": [
       {
         "selectedIconPath": "images/tujian_on.png",
         "iconPath": "images/tujian.png",
-        "pagePath":"pages/homePage/homePage",
+        "pagePath": "pages/homePage/homePage",
         "text": "图文攻略"
       },
       {
@@ -29,6 +33,12 @@
         "iconPath": "images/ji.png",
         "pagePath": "pages/cards/cards",
         "text": "妖灵图鉴"
+      },
+      {
+        "selectedIconPath": "images/shiyan_on.png",
+        "iconPath": "images/shiyan.png",
+        "pagePath": "pages/shiyanshi/overview/overview",
+        "text": "实验室"
       }
     ]
   }

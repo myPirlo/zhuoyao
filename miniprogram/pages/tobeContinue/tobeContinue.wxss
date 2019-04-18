@@ -1,0 +1,31 @@
+.normal-role{
+  align-items: center;
+  
+}
+.normal-role image{
+    width: 211px;
+    height: 205px;
+    margin-top: 40px;
+    opacity: 0.4
+}
+.normal-role text:nth-child(2){
+    font-size: 14px;
+    color: #555555;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0.9
+}
+.normal-role text:nth-child(3){
+  color: rgba(80, 80, 80, 1);
+  font-size: 14px;
+  margin-top: 40%
+}
+.normal-role button{
+    width: 163px;
+    height: 52px;
+    color: white;
+    font-size: 18px;
+    background: rgba(64, 174, 252, 1);
+    margin-top: 20px
+}

@@ -1,11 +1,10 @@
-// miniprogram/pages/homePage/homePage.js
+// pages/enterpriseManager/tobeContinue/tobeContinue.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    articles:[]
 
   },
 
@@ -13,26 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getList()
-  },
-  getList(){
-    let _this=this
-    const db = wx.cloud.database()
-    db.collection('articles').orderBy('id', 'desc').get({
-      success(res) {
-        console.log(res.data)
-        _this.setData({
-          articles:res.data
-        })
-      }
-    })
-  },
-  toDetail(e){
-    console.log(e)
-    let articleId=e.currentTarget.dataset.articleid
-    wx.navigateTo({
-      url: `/pages/articleDetail/articleDetail?id=`+articleId,
-    })
+
   },
 
   /**
@@ -74,13 +54,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
   }
 })

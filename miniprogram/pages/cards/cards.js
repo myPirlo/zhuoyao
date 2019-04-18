@@ -11,7 +11,8 @@ Page({
     cardItems:[],
     pageStart:0,
     pageNum:8,
-    needGetList:true
+    needGetList:true,
+    moreTips:'上拉加载更多...'
   },
 
   /**
@@ -51,6 +52,9 @@ Page({
   },
   onReachBottom: function () {
       if(!this.data.needGetList){
+        this.setData({
+          moreTips:'没有更多了...'
+        })
         return
       }
       console.log('加载下一页')

@@ -133,3 +133,15 @@ index-period-content, .index-period-header {
     text-align: center;
     color: #dedede;
 }
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2;
+}
+.pic image{
+    width: 480rpx;
+    height: 535rpx;   
+    position: relative;
+    left: 35rpx
+}

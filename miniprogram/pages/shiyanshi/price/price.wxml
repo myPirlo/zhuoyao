@@ -1,0 +1,14 @@
+<view class='box'>
+  <view class='onBar'>
+    <text>属性:</text>
+    <slider style='width:75%' block-size='16' value='16'  min="0" max="32" show-value />
+  </view>
+  <view class='onBar'>
+    <text>属性:</text>
+    <slider style='width:75%' block-size='16' value='16'  min="0" max="32" show-value />
+  </view>
+  
+</view>
+
+
+
