@@ -32,7 +32,8 @@ Page({
         isMain:false
       }
     ],
-    attribute:[]
+    zizhi:[],
+    attr:[]
   },
 
   /**
@@ -48,11 +49,73 @@ Page({
       [thisItem]:e.detail.value
     })
   },
-  beginCal(){
-    console.log(this.data.barItem)
+  changeZizhi(e){
+    this.setData({
+      zizhi:e.detail.value
+    })
   },
-  changeCheck(e){
-    console.log(e)
+  changeAttr(e){
+    this.setData({
+      attr:e.detail.value
+    })
+  },
+  beginCal(){
+    if(this.data.zizhi.length==0){
+      wx.showToast({
+        title: '请选择妖灵主资质',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
+    if(this.data.attr.length==0){
+      wx.showToast({
+        title: '请选择妖灵属性',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
+    if(this.data.attr.length>2){
+      wx.showToast({
+        title: '最多选择两种属性',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
+    console.log(this.calScore())
+  },
+  calScore(){
+    let sum=0;
+    let baseScore=40
+    for(var i=0;i<this.data.barItem.length;i++){
+      if(this.data.zizhi.indexOf(String(i))!=-1){
+        //如果是主属性,价值乘以1.9,否则乘以0.5
+        sum+=this.data.barItem[i].value*1.9
+      }else{
+        sum+=this.data.barItem[i].value*0.5
+      }
+    }
+    let score=sum+baseScore
+    for(var i=0;i<this.data.attr.length;i++){
+      if(0<=this.data.attr[i]&&this.data.attr[i]<=5){
+        score*=1
+      }
+      if(6<=this.data.attr[i]&&this.data.attr[i]<=8){
+        score*=1.4
+      }
+      if(9<=this.data.attr[i]&&this.data.attr[i]<=11){
+        score*=1.6
+      }
+      if(12<=this.data.attr[i]&&this.data.attr[i]<=14){
+        score*=1.8
+      }
+      if(15<=this.data.attr[i]&&this.data.attr[i]<=17){
+        score*=2
+      }
+    }
+    return Math.ceil(score)
   },
 
   /**
@@ -94,13 +157,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
   }
 })

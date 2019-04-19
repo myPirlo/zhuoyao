@@ -132,6 +132,8 @@ index-period-content, .index-period-header {
     font-size: 32rpx;
     text-align: center;
     color: #dedede;
+    position:relative;
+    z-index:2;
 }
 .pic{
     display: flex;
@@ -143,5 +145,6 @@ index-period-content, .index-period-header {
     width: 480rpx;
     height: 535rpx;   
     position: relative;
-    left: 35rpx
+    left: 35rpx;
+    top: -20px;
 }

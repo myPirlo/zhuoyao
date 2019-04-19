@@ -4,9 +4,9 @@
     <text>{{item.name}}:</text>
     <slider bindchange='barChange' style='width:75%' block-size='16' value='{{item.value}}' data-index="{{index}}" min="0" max="32" show-value />
   </view>
-  <view class='title' style='margin-top:10px'>请选择主属性</view>
+  <view class='title' style='margin:20px 0'>请选择妖灵主资质</view>
   <view class="checkGroup">
-    <checkbox-group bindchange="changeCheck">
+    <checkbox-group bindchange="changeZizhi">
       <view >
         <checkbox value="0" />物攻
       </view>
@@ -21,6 +21,65 @@
       </view>
       <view >
         <checkbox value="4" />生命
+      </view>
+    </checkbox-group>
+  </view>
+  <view class='title' style='margin:20px 0'>请选择妖灵属性</view>
+  <view class="checkGroup">
+    <checkbox-group bindchange="changeAttr">
+      <view >
+        <checkbox value="0" />无
+      </view>
+      <view >
+        <checkbox value="1" />金
+      </view>
+      <view >
+        <checkbox value="2" />木
+      </view>
+      <view >
+        <checkbox value="3" />水
+      </view>
+      <view >
+        <checkbox value="4" />火
+      </view>
+      <view >
+        <checkbox value="5" />土
+      </view>
+      <view >
+        <checkbox value="6" />烈
+      </view>
+      <view >
+        <checkbox value="7" />冰
+      </view>
+      <view >
+        <checkbox value="8" />空
+      </view>
+      <view >
+        <checkbox value="9" />风
+      </view>
+      <view >
+        <checkbox value="10" />毒
+      </view>
+      <view >
+        <checkbox value="11" />雷
+      </view>
+      <view >
+        <checkbox value="12" />鬼
+      </view>
+      <view >
+        <checkbox value="13" />妖
+      </view>
+      <view >
+        <checkbox value="14" />仙
+      </view>
+      <view >
+        <checkbox value="15" />魔
+      </view>
+      <view >
+        <checkbox value="16" />煞
+      </view>
+      <view >
+        <checkbox value="17" />圣
       </view>
     </checkbox-group>
   </view>
