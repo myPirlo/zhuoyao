@@ -1,11 +1,12 @@
-<view class='container' style="overflow:hidden">
+<ad  unit-id="adunit-5f0be87a61a0349f" style='position:fixed;top:0;height:400px'></ad>
+<view class='container' style="overflow:hidden" style='padding:34% 0 2% 0'>
   <view class='title'>
      {{title}}
   </view>   
   <view class='items'>
       <view class='item-left'>
         <view class='avatar-box'>
-          <image src='../../images/1.jpg'></image>
+          <image src='https://636c-cloudfdh-1259038312.tcb.qcloud.la/guaiwu/6-1-招风.png?sign=5cb2eddb5d4e93797916f1ee033e97ed&t=1555568055'></image>
         </view>
         <text>{{author}}</text>
       </view>
@@ -16,3 +17,4 @@
       <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
     </view>
 </view>
+

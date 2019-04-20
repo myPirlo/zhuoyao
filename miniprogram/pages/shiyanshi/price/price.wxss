@@ -28,8 +28,11 @@ checkbox-group{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap
 }
 checkbox-group view{
   flex-direction: row;
-  align-items: center
+  align-items: center;
+  width: 100rpx;
+  margin-bottom: 6px;
 }
