@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/shiyanshi/priceResult/priceResult",
-    "pages/shiyanshi/price/price",
     "pages/seek/seek",
+    "pages/shiyanshi/price/price",
+    
+    
+    "pages/shiyanshi/priceResult/priceResult",
     "pages/shiyanshi/overview/overview",
     "pages/articleDetail/articleDetail",
     "pages/tobeContinue/tobeContinue",

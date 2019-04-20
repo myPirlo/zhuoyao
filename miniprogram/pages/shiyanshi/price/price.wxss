@@ -1,12 +1,14 @@
 /* miniprogram/pages/shiyanshi/price/price.wxss */
+page{
+  padding-bottom: 10px
+}
 .box{
-  padding: 20px;
+  padding:5px 20px 20px 20px;
 }
 .title{
   font-size: 14px;
   text-align: center;
   color: darkslategrey;
-  margin-bottom: 10px;
 }
 .onBar{
   flex-direction: row;
@@ -35,4 +37,7 @@ checkbox-group view{
   align-items: center;
   width: 100rpx;
   margin-bottom: 6px;
+}
+.return{
+  background-color: burlywood;
 }

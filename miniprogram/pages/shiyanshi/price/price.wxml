@@ -1,10 +1,11 @@
+<ad unit-id="adunit-5f0be87a61a0349f"></ad>
 <view class='box'>
   <view class='title'>请输入妖灵各项资质</view>
   <view class='onBar' wx:for="{{barItem}}" wx:key="index"  >
     <text>{{item.name}}:</text>
     <slider bindchange='barChange' style='width:75%' block-size='16' value='{{item.value}}' data-index="{{index}}" min="0" max="32" show-value />
   </view>
-  <view class='title' style='margin:20px 0'>请选择妖灵主资质</view>
+  <view class='title' style='margin-bottom:10px'>请选择妖灵主资质及属性</view>
   <view class="checkGroup">
     <checkbox-group bindchange="changeZizhi">
       <view >
@@ -24,7 +25,6 @@
       </view>
     </checkbox-group>
   </view>
-  <view class='title' style='margin:20px 0'>请选择妖灵属性</view>
   <view class="checkGroup">
     <checkbox-group bindchange="changeAttr">
       <view >
@@ -85,6 +85,8 @@
   </view>
   
 </view>
-<button class='beginCal' bindtap='beginCal'>开始评估</button>
+<button class='beginCal' style="margin-top:0" bindtap='beginCal'>开始评估</button>
+<button class='beginCal return' bindtap='return'>回首页</button>
+
 
 

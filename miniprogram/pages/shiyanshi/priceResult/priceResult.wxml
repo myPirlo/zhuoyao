@@ -1,4 +1,19 @@
 <!--index.wxml-->
 <view class="container">
+  <view class='title'>妖灵评分</view>
+  <view class='title title-result'>{{result}}</view>
   <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  <view class="bottom-box">
+    
+     <text class='pingyu'>评语: {{contentDetail}}</text>
+     <view style='align-items:center;' wx:if='{{!ifHasGlobal}}'>
+      <view bindtap='toJDing' style='color:white;text-align:center;padding:5px;background:darkkhaki;width:300rpx;height:80rpx;border-radius:8rpx;' >现在就去</view>
+     </view>
+     <view class='btn-group'>
+       <button class='shareButton' bindtap='toJDing' wx:if='{{ifHasGlobal}}'>重新鉴定</button>
+       <button class='shareButton' open-type="share" wx:if='{{ifHasGlobal}}'>分享给好友</button>
+     </view>
+     
+
+  </view>
 </view>

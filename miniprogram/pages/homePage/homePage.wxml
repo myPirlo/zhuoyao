@@ -1,3 +1,4 @@
+<ad unit-id="adunit-5f0be87a61a0349f"></ad>
 <view class='container'>
 <view class="box" wx:for="{{articles}}" wx:key="index">
   <view class='oneArticle' bindtap='toDetail'  data-articleid='{{item.id}}'>
@@ -19,4 +20,4 @@
   </view>
   </view>
 </view>
-<ad unit-id="adunit-5f0be87a61a0349f"></ad>
+

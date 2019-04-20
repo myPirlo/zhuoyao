@@ -17,7 +17,7 @@ Page({
   },
   toPriceView(){
     wx.navigateTo({
-      url: '/pages/tobeContinue/tobeContinue',
+      url: '/pages/shiyanshi/price/price',
     })
   },
   toStepView(){
