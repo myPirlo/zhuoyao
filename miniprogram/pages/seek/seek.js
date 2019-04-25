@@ -1,3 +1,4 @@
+const db = wx.cloud.database()
 Page({
 
     /**
@@ -5,12 +6,13 @@ Page({
      */
     data: {
         userInfo: {},
+        mask:true,
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad() {
-      console.log(1)
+
       wx.getStorage({
         key: 'name',
         success(res) {
@@ -19,6 +21,25 @@ Page({
           })
         }
       }) 
+      //但愿不会再用上这段代码
+      // let _this=this
+      // db.collection('mask').get({
+      //   success(res) {
+      //     if(res.data[0].isShow=='0'){
+      //       _this.setData({
+      //         mask: false
+      //       })
+      //       wx.getStorage({
+      //         key: 'name',
+      //         success(res) {
+      //           wx.switchTab({
+      //             url: '/pages/homePage/homePage',
+      //           })
+      //         }
+      //       }) 
+      //     }
+      //   }
+      // })
     },
     /**
      * 设置初始化值
@@ -42,5 +63,11 @@ Page({
       wx.switchTab({
         url: '/pages/homePage/homePage',
       })
-    }
+    },
+    catchOne(){
+      wx.showToast({
+        title: '捕捉成功',
+      })
+    } 
+    
 })

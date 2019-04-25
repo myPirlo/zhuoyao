@@ -9,7 +9,8 @@ Page({
     article:'',
     title:'',
     author:'',
-    date:''
+    date:'',
+    articleImg:''
   },
 
   /**
@@ -17,6 +18,12 @@ Page({
    */
   onLoad: function (options) {
     this.showArticle(options.id)
+
+  },
+  backHome(){
+    wx.navigateTo({
+      url: '/pages/seek/seek',
+    })
 
   },
   showArticle(id){
@@ -31,7 +38,8 @@ Page({
           article:res.data[0].content,
           title: res.data[0].articleTitle,
           date: res.data[0].publicTime,
-          author: res.data[0].author
+          author: res.data[0].author,
+          articleImg: res.data[0].articleImg
         })
         WxParse.wxParse('article', 'html', _this.data.article, _this, 5);
       }
@@ -78,6 +86,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+
+  },
+  onShareAppMessage: function () {
+    return {
+      title: this.data.title,
+      imageUrl: this.data.articleImg
+    }
 
   }
 })

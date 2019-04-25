@@ -30,3 +30,7 @@
 <view class="pic">
     <image src="https://636c-cloudfdh-1259038312.tcb.qcloud.la/guaiwu/6-1-招风.png?sign=5cb2eddb5d4e93797916f1ee033e97ed&t=1555568055" />
 </view>
+<!-- <view class='checkMask' wx:if='{{mask}}'>
+   <view class='tips'>捉妖啊捉妖</view>
+   <view class='btn' bindtap='catchOne'>捉一只</view>
+</view> -->

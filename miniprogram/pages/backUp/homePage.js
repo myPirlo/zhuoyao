@@ -24,10 +24,17 @@ Page({
     let _this=this
     const db = wx.cloud.database()
     const _ = db.command
-    db.collection('articles').orderBy('id', 'desc').get({
+    db.collection('articles').where({
+      id: _.gte(_this.data.pageStart).and(_.lte((_this.data.pageNum)))
+    }).orderBy('id', 'desc').get({
       success(res) {
         wx.hideLoading()
-        let listArr =res.data
+        if (res.data.length < 3) {
+          _this.setData({
+            needGetList: false
+          })
+        }
+        let listArr = _this.data.articles.concat(res.data)
         _this.setData({
           articles: listArr
         })
@@ -81,7 +88,15 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    if (!this.data.needGetList) {
+      console.log('没有数据了')
+      return
+    }
+    this.setData({
+      pageStart: this.data.pageStart + 3,
+      pageNum: this.data.pageNum + 3
+    })
+    this.getList()
   },
 
   /**

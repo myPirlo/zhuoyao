@@ -24,6 +24,9 @@ view{
 view image{
     width: 100%
 }
+.wxParse-p image{
+  margin: auto !important
+}
 .wxParse-inline{
     display: inline;
     margin: 0;

@@ -3,6 +3,32 @@
 page {
     background: #F7FAFF;
 }
+.checkMask{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #ECECEC;
+  align-items: center;
+  justify-content: center;
+}
+.tips{
+  color: blueviolet;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: -2px -2px 2px #76D424
+}
+.btn{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  background: burlywood
+}
 
 .guard-bg {
     height: 320rpx;

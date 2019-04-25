@@ -17,4 +17,7 @@
       <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
     </view>
 </view>
+<view class='backHome' bindtap='backHome'>
+ <image src='../../images/back.png'></image>
+</view>
 

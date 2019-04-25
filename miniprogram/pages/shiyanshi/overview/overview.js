@@ -27,7 +27,7 @@ Page({
   },
   toCatchView(){
     wx.navigateTo({
-      url: '/pages/tobeContinue/tobeContinue',
+      url: '/pages/catchOne/catchOne',
     })
   },
   /**

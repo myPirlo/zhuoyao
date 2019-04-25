@@ -1,0 +1,26 @@
+<ad  unit-id="adunit-5f0be87a61a0349f" style='position:fixed;top:0;height:400px;z-index:999'></ad>
+<view class='content'>
+  <view class='bg'></view>
+  <view class='checkMask'>
+    <view class='arr' >
+       <view class='btn' bindtap='catchOne'>试试手气</view>
+    </view>
+  </view>
+  <view class='oneAnimal' wx:if='{{showCard}}'>
+    <view class='title'>妖灵名称 : {{name}}</view>
+    <view class='o-content'>
+       <view>物攻资质 : {{wg}} </view>
+       <view>物防资质 : {{wf}} </view>
+       <view>法攻资质 : {{fg}} </view>
+       <view>法防资质 : {{ff}} </view>
+       <view>生命资质 : {{sm}} </view>
+    </view>
+    <view class='close' bindtap='closeOne'>
+      <image src='../../images/close.png'></image>
+    </view>
+  </view>
+  <view class='backHome' bindtap='backHome'>
+  <image src='../../images/back.png'></image>
+  </view>
+</view>
+

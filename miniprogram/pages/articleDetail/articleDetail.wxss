@@ -45,3 +45,21 @@
   height: 1000rpx;
   align-items: center;
 }
+.backHome{
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  background:	#A52A2A;
+  opacity: 0.8;
+  width: 150rpx;
+  height: 150rpx;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 15px;
+  align-items: center;
+}
+.backHome image{
+  width: 60%;
+  height: 60%
+}
