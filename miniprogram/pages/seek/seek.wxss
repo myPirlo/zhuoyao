@@ -75,6 +75,7 @@ page {
 
 .user-content {
     padding: 0 30rpx;
+    flex-direction: row;
 }
 
 .user-content .avatar {
@@ -87,6 +88,7 @@ page {
 
 .user-content .cell {
     margin-left: 30rpx;
+    width:81%;
 }
 
 .user-content .name {
