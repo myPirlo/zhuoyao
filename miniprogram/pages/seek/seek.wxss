@@ -54,7 +54,7 @@ page {
     left: 0;
     width: 8rpx;
     height: 50rpx;
-    background-color: #76D424;
+    background-color: #1E90FF;
 }
 
 .user-header .title .cn {
@@ -113,7 +113,7 @@ page {
 .send button {
     margin: 0 30rpx;
     color: #fff;
-    background: #E38627;
+    background: #1E90FF;
     border-radius: 50rpx;
     box-shadow: 1px 1px 2px 1px #ECECEC;
 }

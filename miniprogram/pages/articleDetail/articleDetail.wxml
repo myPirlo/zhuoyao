@@ -1,5 +1,6 @@
 <ad  unit-id="adunit-5f0be87a61a0349f" style='position:fixed;top:0;height:400px'></ad>
-<view class='container' style="overflow:hidden" style='padding:34% 0 2% 0'>
+<!-- <view class='container' style="overflow:hidden" style='padding:34% 0 2% 0'> -->
+<view class='container' style="overflow:hidden" style='padding:0 0 2% 0'>
   <view class='title'>
      {{title}}
   </view>   
